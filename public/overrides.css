@@ -1,0 +1,89 @@
+:root,
+body.light {
+  --primary: #6750a4;
+  --on-primary: #ffffff;
+  --primary-container: #eaddff;
+  --on-primary-container: #21005e;
+  --secondary: #625b71;
+  --on-secondary: #ffffff;
+  --secondary-container: #e8def8;
+  --on-secondary-container: #1e192b;
+  --tertiary: #7d5260;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #ffd8e4;
+  --on-tertiary-container: #370b1e;
+  --error: #b3261e;
+  --on-error: #ffffff;
+  --error-container: #f9dedc;
+  --on-error-container: #370b1e;
+  --background: #fffbfe;
+  --on-background: #1c1b1f;
+  --surface: #fffbfe;
+  --on-surface: #1c1b1f;
+  --surface-variant: #e7e0ec;
+  --on-surface-variant: #49454e;
+  --inverse-surface: #313033;
+  --inverse-on-surface: #f4eff4;
+  --outline: #79747e;
+  --active: rgba(0, 0, 0, 0.1);
+  --overlay: rgba(0, 0, 0, 0.5);
+  --elevate1: 0 2rem 2rem 0 rgba(0, 0, 0, 0.14), 0 1rem 5rem 0 rgba(0, 0, 0, 0.12),
+    0 3rem 1rem -2rem rgba(0, 0, 0, 0.2);
+  --elevate2: 0 6rem 10rem 0 rgba(0, 0, 0, 0.14), 0 1rem 18rem 0 rgba(0, 0, 0, 0.12),
+    0 3rem 5rem -1rem rgba(0, 0, 0, 0.3);
+  --elevate3: 0 10rem 16rem 0 rgba(0, 0, 0, 0.14), 0 1rem 31rem 0 rgba(0, 0, 0, 0.12),
+    0 3rem 9rem 0rem rgba(0, 0, 0, 0.4);
+  --size: 1px;
+  --font: "Roboto", BlinkMacSystemFont, -apple-system, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --speed1: 0.1s;
+  --speed2: 0.2s;
+  --speed3: 0.3s;
+  --speed4: 0.4s;
+}
+
+body.dark {
+  --body: #1c1b1f;
+  --primary: #fbaaff;
+  --on-primary: #570068;
+  --primary-container: #7b0091;
+  --on-primary-container: #ffd5ff;
+  --secondary: #d7bfd5;
+  --on-secondary: #3b2b3b;
+  --secondary-container: #534153;
+  --on-secondary-container: #f5dbf2;
+  --tertiary: #f6b8ae;
+  --on-tertiary: #4c251f;
+  --tertiary-container: #663b34;
+  --on-tertiary-container: #ffdad2;
+  --error: #ffb4a9;
+  --error-container: #930006;
+  --on-error: #680003;
+  --on-error-container: #ffdad4;
+  --background: #1e1a1d;
+  --on-background: #e9e0e5;
+  --surface: #1e1a1d;
+  --on-surface: #e9e0e5;
+  --surface-variant: #4d444c;
+  --on-surface-variant: #d0c3cc;
+  --outline: #998e96;
+  --inverse-on-surface: #1e1a1d;
+  --inverse-surface: #e9e0e5;
+  --inverse-primary: #9a25ae;
+  --shadow: #000000;
+  --active: rgba(255, 255, 255, 0.2);
+  --overlay: rgba(0, 0, 0, 0.5);
+  --elevate1: 0 2rem 2rem 0 rgba(0, 0, 0, 0.14), 0 1rem 5rem 0 rgba(0, 0, 0, 0.12),
+    0 3rem 1rem -2rem rgba(0, 0, 0, 0.2);
+  --elevate2: 0 6rem 10rem 0 rgba(0, 0, 0, 0.14), 0 1rem 18rem 0 rgba(0, 0, 0, 0.12),
+    0 3rem 5rem -1rem rgba(0, 0, 0, 0.3);
+  --elevate3: 0 10rem 16rem 0 rgba(0, 0, 0, 0.14), 0 1rem 31rem 0 rgba(0, 0, 0, 0.12),
+    0 3rem 9rem 0rem rgba(0, 0, 0, 0.4);
+  --size: 1px;
+  --font: "Roboto", BlinkMacSystemFont, -apple-system, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --speed1: 0.1s;
+  --speed2: 0.2s;
+  --speed3: 0.3s;
+  --speed4: 0.4s;
+}
