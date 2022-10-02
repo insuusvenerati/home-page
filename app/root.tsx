@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, cookieStorageManagerSSR, localStorageManager } from "@chakra-ui/react";
 import { withEmotionCache } from "@emotion/react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
@@ -10,9 +10,14 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useLoaderData,
 } from "@remix-run/react";
 import React, { useContext, useEffect } from "react";
 import { ClientStyleContext, ServerStyleContext } from "./context";
+
+export const loader: LoaderFunction = async ({ request }) => {
+  return request.headers.get("cookie") ?? "";
+};
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -51,7 +56,7 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
     });
     // reset cache to reapply global styles
     clientStyleData?.reset();
-  }, [clientStyleData, emotionCache.sheet]);
+  }, []);
 
   return (
     <html lang="en">
@@ -70,17 +75,22 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
       <body>
         {children}
         <ScrollRestoration />
-        {/* <Scripts /> */}
-        <LiveReload />
+        <Scripts />
+        {process.env.NODE_ENV === "development" ? <LiveReload /> : null}
       </body>
     </html>
   );
 });
 
 export default function App() {
+  const cookies = useLoaderData();
   return (
     <Document>
-      <ChakraProvider>
+      <ChakraProvider
+        colorModeManager={
+          typeof cookies === "string" ? cookieStorageManagerSSR(cookies) : localStorageManager
+        }
+      >
         <Outlet />
       </ChakraProvider>
     </Document>
@@ -100,7 +110,7 @@ export function CatchBoundary() {
       <body>
         <h1> 💩 </h1>
         <h2> {caught.data} </h2>
-        {/* <Scripts /> */}
+        <Scripts />
       </body>
     </html>
   );
