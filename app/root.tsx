@@ -12,12 +12,15 @@ import {
   useCatch,
   useLoaderData,
 } from "@remix-run/react";
+import { withSentry } from "@sentry/remix";
 import React, { useContext, useEffect } from "react";
 import { ClientStyleContext, ServerStyleContext } from "./context";
 
 export const loader: LoaderFunction = async ({ request }) => {
   return request.headers.get("cookie") ?? "";
 };
+
+// lang="en" data-theme="light" style={{ colorScheme: "light" }}
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -82,7 +85,7 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
   );
 });
 
-export default function App() {
+function App() {
   const cookies = useLoaderData();
   return (
     <Document>
@@ -96,6 +99,8 @@ export default function App() {
     </Document>
   );
 }
+
+export default withSentry(App);
 
 export function CatchBoundary() {
   const caught = useCatch();
