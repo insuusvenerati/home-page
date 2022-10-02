@@ -26,10 +26,23 @@
     "@remix-run/eslint-config": "^1.7.2",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "eslint": "^8.23.1",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
+    "eslint-plugin-react": "^7.31.8",
     "typescript": "^4.7.4"
   },
   "engines": {
     "node": ">=14"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSpacing": true
   }
 }
