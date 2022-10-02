@@ -2,7 +2,7 @@
 FROM node:16-bullseye-slim as base
 
 # Install openssl for Prisma
-RUN apt-get update && apt-get install -y openssl
+# RUN apt-get update && apt-get install -y openssl
 
 # Install all node_modules, including dev dependencies
 FROM base as deps
@@ -11,7 +11,7 @@ RUN mkdir /app
 WORKDIR /app
 
 ADD package.json yarn.lock ./
-RUN npm install --production=false
+RUN yarn
 
 # Setup production node_modules
 FROM base as production-deps
@@ -21,7 +21,7 @@ WORKDIR /app
 
 COPY --from=deps /app/node_modules /app/node_modules
 ADD package.json yarn.lock ./
-RUN npm prune --production
+RUN yarn
 
 # Build the app
 FROM base as build
@@ -38,7 +38,7 @@ COPY --from=deps /app/node_modules /app/node_modules
 # RUN npx prisma generate
 
 ADD . .
-RUN npm run build
+RUN yarn build
 
 # Finally, build the production image with minimal footprint
 FROM base
@@ -57,4 +57,4 @@ COPY --from=build /app/build /app/build
 COPY --from=build /app/public /app/public
 ADD . .
 
-CMD ["npm", "run", "start"]
+CMD ["yarn", "start"]
