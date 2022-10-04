@@ -1,5 +1,7 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import type { LinksFunction } from "@remix-run/react/dist/routeModules";
+import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -9,30 +11,19 @@ export const meta: MetaFunction = () => ({
 
 export const links: LinksFunction = () => {
   return [
-    {
-      rel: "stylesheet",
-      href: "https://cdn.jsdelivr.net/npm/beercss@2.2.11/dist/cdn/beer.min.css",
-    },
-    {
-      rel: "stylesheet",
-      href: "/overrides.css",
-    },
+    { rel: "stylesheet", href: styles },
+    { rel: "icon", href: "/favicon.ico" },
   ];
 };
 
 export default function App() {
   return (
-    <html lang="en">
+    <html data-theme="halloween" lang="en">
       <head>
-        <script
-          src="https://cdn.jsdelivr.net/npm/beercss@2.2.11/dist/cdn/beer.min.js"
-          type="text/javascript"
-        ></script>
-
         <Meta />
         <Links />
       </head>
-      <body className="dark">
+      <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
