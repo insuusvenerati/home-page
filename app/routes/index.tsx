@@ -1,55 +1,41 @@
+import { Button } from "~/components/Button";
+import { Card } from "~/components/Card";
+import { Nav } from "~/components/Nav";
+
 export default function Index() {
   return (
     <>
-      <nav className="left m l medium-elevate">
-        <img alt="icon" src="https://www.beercss.com/favicon.png" className="circle margin" />
-        <a>
-          <i>home</i>
-          <div>Home</div>
-        </a>
-        <a>
-          <i>search</i>
-          <div>Search</div>
-        </a>
-        <a>
-          <i>share</i>
-          <div>Share</div>
-        </a>
-        <a>
-          <i>more_vert</i>
-          <div>More</div>
-        </a>
-      </nav>
-
-      <nav className="bottom s">
-        <a>
-          <i>home</i>
-        </a>
-        <a>
-          <i>search</i>
-        </a>
-        <a>
-          <i>share</i>
-        </a>
-        <a>
-          <i>more_vert</i>
-        </a>
-      </nav>
+      <Nav />
 
       <main className="responsive">
         <img
           src="/beer_woman.jpg"
-          className="responsive round large-elevate cover-fill"
+          className="responsive round large-elevate"
           alt="beer and woman"
         />
-        <article>
-          <h3>Welcome</h3>
-          <h5>The beer is ready!</h5>
-        </article>
 
-        <article>
-          <button className="large-elevate responsive">Hello</button>
-        </article>
+        <Card>
+          <Card.Header>
+            <img className="responsive" src="/beer_woman.jpg" alt="test" />
+          </Card.Header>
+          this is some long text this is some long text this is some long text this is some long
+          text this is some long text this is some long text this is some long text this is some
+          long text this is some long text this is some long text this is some long text this is
+          some long text this is some long text this is some long text this is some long text this
+          is some long text this is some long text this is some long text this is some long text
+          this is some long text this is some long text this is some long text this is some long
+          this is some long text this is some long text this is some long text this is some long
+          text this is some long text this is some long text this is some long text this is some
+          long text this is some long text this is some long text this is some long text this is
+          some long text this is some long text this is some long text this is some long text this
+          is some long text this is some long text this is some long text this is some long text
+          this is some long text this is some long text this is some long text this is some long
+          <Card.Footer>This is the footer</Card.Footer>
+        </Card>
+
+        <Card>
+          <Button>Hello</Button>
+        </Card>
       </main>
     </>
   );
