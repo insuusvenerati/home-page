@@ -86,4 +86,5 @@ body.dark {
   --speed2: 0.2s;
   --speed3: 0.3s;
   --speed4: 0.4s;
+  outline: var(--active);
 }

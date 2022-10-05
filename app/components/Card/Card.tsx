@@ -11,6 +11,7 @@ export type CardProps = {
   text?: string | null;
   headerText?: string | null;
   footerText?: string | null;
+  compact?: boolean;
 } & AllClassesMap;
 
 export interface CardType {
@@ -23,8 +24,10 @@ export const Card: React.FC<CardProps> & CardType = ({
   text,
   headerText,
   footerText,
+  compact = false,
   ...rest
 }) => {
+  const classNames: Partial<AllClassesMap> = { "tiny-padding": compact, ...rest };
   useEffect(() => {
     if (!text && !children) {
       console.warn("Nothing rendered by Card component. Pass a child or text prop.");
@@ -36,7 +39,7 @@ export const Card: React.FC<CardProps> & CardType = ({
     }
   });
   return (
-    <article className={classnames({ ...rest })}>
+    <article className={classnames({ ...classNames })}>
       {headerText && <CardHeader>{headerText}</CardHeader>}
       {children || text}
       {footerText && <CardFooter>{footerText}</CardFooter>}

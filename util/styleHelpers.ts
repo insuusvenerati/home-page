@@ -1,7 +1,4 @@
-/**
- * If you add a new class, it needs to be added
- * to
- */
+// https://github.com/beercss/beercss/blob/main/docs/HELPERS.md
 
 export const alignments = {
   "left-align": true,
@@ -366,6 +363,14 @@ export const sizes = {
   "large-height": true,
 };
 
+export const iconSizes = {
+  tiny: true,
+  small: true,
+  medium: true,
+  large: true,
+  extra: true,
+};
+
 export const spaces = {
   space: true,
   "no-space": true,
@@ -481,6 +486,7 @@ export type Responsive = keyof typeof responsive;
 export type Theme = keyof typeof theme;
 export type Typography = keyof typeof typography;
 export type Waves = keyof typeof waves;
+export type IconSizes = keyof typeof iconSizes;
 
 export type AllClasses =
   | Alignments
@@ -503,4 +509,8 @@ export type AllClasses =
 
 export type AllClassesMap = {
   [key in AllClasses]?: boolean;
+};
+
+export type IconSizesMap = {
+  [key in IconSizes]?: boolean;
 };

@@ -1,15 +1,12 @@
 import classNames from "classnames";
 import type { BaseComponentProps } from "types/react";
+import type { AllClassesMap } from "util/styleHelpers";
 
 export type CardHeaderProps = BaseComponentProps & {
   children: React.ReactNode | React.ReactNode[];
 };
 
 export const CardHeader: React.FC<CardHeaderProps> = ({ children, ...rest }) => {
-  console.log(children);
-  return (
-    <header className={classNames({ ...rest })}>
-      <figure>{children}</figure>
-    </header>
-  );
+  const compact: Partial<AllClassesMap> = { "no-padding": true };
+  return <header className={classNames({ ...compact, ...rest })}>{children}</header>;
 };

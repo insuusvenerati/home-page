@@ -32,7 +32,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="light">
+      <body className="dark">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
