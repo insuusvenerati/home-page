@@ -1,5 +1,4 @@
 import { Nav } from "~/components/Nav";
-import beholdWebm from "../assets/behold.webm";
 import beholdMp4 from "../assets/behold.mp4";
 import { Container } from "~/components/Container";
 import { Card } from "~/components/Card";
@@ -13,7 +12,6 @@ export default function Index() {
       <Container>
         <Card no-padding>
           <video playsInline autoPlay loop={true} muted className="responsive medium-elevate">
-            <source src={beholdWebm} type="video/webm" />
             <source src={beholdMp4} type="video/mp4" />
           </video>
         </Card>
