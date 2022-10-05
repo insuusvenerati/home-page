@@ -1,6 +1,6 @@
 export const NavTop = () => {
   return (
-    <nav role="navigation" className="left m l medium-elevate">
+    <nav style={{ opacity: 0.8 }} role="navigation" className="left m l medium-elevate">
       <img alt="icon" src="https://www.beercss.com/favicon.png" className="circle margin" />
       <a>
         <i>home</i>

@@ -6,7 +6,7 @@ export type ButtonProps = BaseComponentProps & {
   icon?: string;
 };
 
-const defaultProps = { "medium-elevate": true, responsive: true };
+const defaultProps = { "medium-elevate": true };
 
 export const Button: React.FC<ButtonProps> = ({ children, icon, ...rest }) => {
   return (

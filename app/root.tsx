@@ -32,7 +32,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="dark">
+      <body className="dark overwatch">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

@@ -43,29 +43,36 @@ body.light {
 }
 
 body.dark {
-  --body: #1c1b1f;
+  /* --body: #1c1b1f; */
+
   --primary: #fbaaff;
   --on-primary: #570068;
   --primary-container: #7b0091;
   --on-primary-container: #ffd5ff;
+
   --secondary: #d7bfd5;
   --on-secondary: #3b2b3b;
   --secondary-container: #534153;
   --on-secondary-container: #f5dbf2;
+
   --tertiary: #f6b8ae;
   --on-tertiary: #4c251f;
   --tertiary-container: #663b34;
   --on-tertiary-container: #ffdad2;
+
   --error: #ffb4a9;
   --error-container: #930006;
   --on-error: #680003;
   --on-error-container: #ffdad4;
+
   --background: #1e1a1d;
   --on-background: #e9e0e5;
-  --surface: #1e1a1d;
+
+  /* --surface: #1e1a1d; */
   --on-surface: #e9e0e5;
   --surface-variant: #4d444c;
   --on-surface-variant: #d0c3cc;
+
   --outline: #d4af37;
   --inverse-on-surface: #1e1a1d;
   --inverse-surface: #e9e0e5;
@@ -73,10 +80,13 @@ body.dark {
   --shadow: #000000;
   --active: rgba(255, 255, 255, 0.2);
   --overlay: rgba(0, 0, 0, 0.5);
+
   --elevate1: 0 2rem 2rem 0 rgba(0, 0, 0, 0.14), 0 1rem 5rem 0 rgba(0, 0, 0, 0.12),
     0 3rem 1rem -2rem rgba(0, 0, 0, 0.2);
+
   --elevate2: 0 6rem 10rem 0 rgba(0, 0, 0, 0.14), 0 1rem 18rem 0 rgba(0, 0, 0, 0.12),
     0 3rem 5rem -1rem rgba(0, 0, 0, 0.3);
+
   --elevate3: 0 10rem 16rem 0 rgba(0, 0, 0, 0.14), 0 1rem 31rem 0 rgba(0, 0, 0, 0.12),
     0 3rem 9rem 0rem rgba(0, 0, 0, 0.4);
   --size: 1px;
@@ -86,5 +96,38 @@ body.dark {
   --speed2: 0.2s;
   --speed3: 0.3s;
   --speed4: 0.4s;
-  outline: var(--active);
+}
+
+body.overwatch {
+  /* Colors */
+  --cadet-blue-crayola: #9dacc4ff;
+  --cadet-blue-crayola-2: #a9b7ceff;
+  --cadet-blue-crayola-3: #a0afc6ff;
+  --wild-blue-yonder: #96a4beff;
+  --wild-blue-yonder-2: #92a0bbff;
+  --wild-blue-yonder-3: #99a7c1ff;
+  --charcoal: #3f4a59ff;
+
+  --spanish-orange: #ec6315ff;
+  --spanish-orange2: #eae3df;
+  --spanish-orange3: #ddccc3;
+  --spanish-orange4: #d4b7a6;
+  --spanish-orange5: #d0a287;
+  --spanish-orange6: #d28e66;
+  --spanish-orange7: #db7941;
+  --spanish-orange8: #ec6416;
+  --spanish-orange9: #c35f25;
+  --spanish-orange10: #a15930;
+  --spanish-orange11: #875335;
+  --spanish-orange12: #724d37;
+  --spanish-orange13: #614637;
+  --spanish-orange14: #544035;
+
+  --cool-grey: #8795b3ff;
+  --cool-grey-2: #8a97b3ff;
+
+  --body: var(--cool-grey);
+  --surface: var(--charcoal);
+  --primary: var(--spanish-orange);
+  --on-primary: var(--charcoal);
 }
